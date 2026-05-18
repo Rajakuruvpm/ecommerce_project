@@ -37,7 +37,7 @@ const OrderPage = () => {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },
             }
-            // Mocking payment success
+     
             await axios.put(`/api/orders/${id}/pay`, {
                 id: 'PAYMENT_ID_MOCK',
                 status: 'COMPLETED',
@@ -45,7 +45,7 @@ const OrderPage = () => {
                 email_address: order.user.email
             }, config)
 
-            // Re-fetch order to show updated status
+           
             const { data } = await axios.get(`/api/orders/${id}`, config)
             setOrder(data)
         } catch (err) {
@@ -191,7 +191,7 @@ const OrderPage = () => {
                 </div>
             </div>
 
-            {/* Review Modal */}
+          
             {showReviewModal && (
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
                     <div className="bg-white rounded-[2.5rem] w-full max-w-md p-10 shadow-2xl animate-in fade-in zoom-in duration-300">

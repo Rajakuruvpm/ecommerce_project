@@ -30,9 +30,7 @@ const AdminLayout = ({ children }) => {
 
     return (
         <div className="flex min-h-screen bg-gray-100">
-            {/* Sidebar */}
             <aside className={`${collapsed ? 'w-20' : 'w-64'} bg-gray-900 text-white flex flex-col transition-all duration-300 shrink-0`}>
-                {/* Logo */}
                 <div className="flex items-center justify-between px-5 py-5 border-b border-gray-700">
                     {!collapsed && (
                         <div className="flex items-center space-x-2">
@@ -45,8 +43,6 @@ const AdminLayout = ({ children }) => {
                         {collapsed ? <Menu className="h-5 w-5" /> : <X className="h-5 w-5" />}
                     </button>
                 </div>
-
-                {/* Nav */}
                 <nav className="flex-1 py-6 space-y-1 px-3">
                     {navItems.map(({ to, icon: Icon, label }) => (
                         <NavLink
@@ -66,7 +62,6 @@ const AdminLayout = ({ children }) => {
                     ))}
                 </nav>
 
-                {/* User + Logout */}
                 <div className="border-t border-gray-700 px-3 py-4">
                     {!collapsed && (
                         <div className="px-3 py-2 mb-2">
@@ -84,9 +79,7 @@ const AdminLayout = ({ children }) => {
                 </div>
             </aside>
 
-            {/* Main content */}
             <div className="flex-1 flex flex-col overflow-hidden">
-                {/* Top bar */}
                 <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 h-20 px-8 flex items-center justify-between shrink-0">
                     <div className="flex items-center space-x-4">
                         <div className="w-10 h-10 rounded-2xl bg-gray-50 flex items-center justify-center border border-gray-100">

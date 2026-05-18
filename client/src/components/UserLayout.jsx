@@ -29,7 +29,7 @@ const UserLayout = ({ children }) => {
                             <p className="text-blue-200 text-xs mt-1 truncate">{user?.email}</p>
                         </div>
 
-                        {/* Nav */}
+                
                         <nav className="p-3 space-y-1">
                             <NavLink
                                 to="/profile"
@@ -68,7 +68,7 @@ const UserLayout = ({ children }) => {
                     </div>
                 </aside>
 
-                {/* Content */}
+
                 <main className="lg:col-span-3">
                     {children}
                 </main>
